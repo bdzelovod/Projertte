@@ -1,0 +1,165 @@
+
+body {
+    background: linear-gradient(120deg, #162938, #1f567a);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 5%; 
+    background: linear-gradient(45deg, #1f567a, #162938); 
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+.admin-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.admin-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.1); 
+}
+
+.admin-nav a:hover {
+    background: #2ecc71;
+    color: white;
+}
+
+
+.admin-back-btn {
+    margin-top: 80px; 
+    text-align: center;
+    padding: 1rem;
+}
+
+.btn-back {
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    display: inline-block;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+
+.admin-table {
+    width: 90%;
+    max-width: 1200px;
+    margin: 120px auto 20px; 
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+
+.update-btn,
+.delete-btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 0 5px;
+}
+
+.update-btn {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+}
+
+.delete-btn {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+.update-btn:hover {
+    background: #2980b9;
+}
+
+
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    z-index: 9999;
+    animation: slideDown 0.5s ease-out;
+}
+
+.success { background: #28a745; }
+.error { background: #dc3545; }
+
+
+.admin-table input[type="text"],
+.admin-table input[type="email"],
+.admin-table select {
+    width: 150px;
+    padding: 5px;
+    margin: 5px 0;
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+
+.admin-container {
+    padding: 20px;
+    margin-top: 120px; 
+}
+
+
+.btn-home {
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    margin-left: 20px; 
+    font-size: 1em;
+}
+
+.btn-home:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+
+.btn-home .fas {
+    margin-right: 5px;
+}

@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(kak.png.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    z-index: 9999;
+    animation: slideDown 0.5s ease-out;
+}
+
+.success {
+    background: #28a745;
+}
+
+.error {
+    background: #dc3545;
+}
+
+@keyframes slideDown {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 20px;
+    }
+}
+.notification {
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+.notification.hide {
+    opacity: 0;
+    top: -50px;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none; 
+}
+
+.navigation a {
+    position:  relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+content: '';
+position: absolute;
+left: 0;
+bottom: -6px;
+width: 100%;
+height: 3px;
+background: #fff;
+border-radius: 5px;
+transform-origin: right;
+transform: scaleX(0);
+transition: transform .5s;
+} 
+
+.navigation a:hover:after {
+    transform: scaleX(1); 
+    transform-origin: left;
+}
+
+
+/* В styleNews.css */
+.news-card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+.news-image {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; 
+    margin: 0 auto 1rem; 
+    border: 4px solid #2ecc71; 
+    transition: border-color 0.3s ease; 
+}
+
+.news-card:hover .news-image {
+    border-color: #27ae60; 
+}
+
+
+.news-title {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin: 0.5rem 0;
+}
+
+
+.news-description {
+    font-size: 1rem;
+    color: #c6c6c6;
+    margin: 0.5rem 0;
+}
+
+
+.news-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: linear-gradient(to bottom, #162938, #1f567a);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #2ecc71;
+}
+
+
+.modal-image {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; 
+    margin-bottom: 1rem;
+    border: 4px solid #2ecc71;
+    transition: border-color 0.3s ease; 
+}
+
+.modal-content:hover .modal-image {
+    border-color: #27ae60; 
+}
+
+
+.modal-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+
+.modal-description {
+    font-size: 1rem;
+    color: #c6c6c6;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+
+.news-container {
+    max-width: 1200px;
+    margin: 6rem auto 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+
+.news-container h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .news-container {
+        margin: 4rem auto 1rem;
+    }
+
+    .news-container h1 {
+        font-size: 2rem;
+    }
+
+    .news-image, .modal-image {
+        width: 120px; 
+        height: 120px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .news-container {
+        margin: 8rem auto 3rem;
+    }
+
+    .news-container h1 {
+        font-size: 3rem;
+    }
+
+    .news-image, .modal-image {
+        width: 200px; 
+        height: 200px;
+    }
+}
