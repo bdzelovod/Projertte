@@ -15,9 +15,9 @@ document.querySelectorAll('.close-modal').forEach(closeBtn => {
     });
 });
 
-// Закрываем модальное окно при клике вне его содержимого.
+// Закрываем модальное окно при клике вне его содержимого.4r4r44r
 window.addEventListener('click', event => {
     if (event.target.classList.contains('modal')) { // Проверяем, что клик был на самой подложке модального окна.
         event.target.style.display = 'none'; // Скрываем модальное окно.
     }
-});hjh
+});
