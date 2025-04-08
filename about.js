@@ -20,4 +20,4 @@ window.addEventListener('click', event => {
     if (event.target.classList.contains('modal')) { // Проверяем, что клик был на самой подложке модального окна.
         event.target.style.display = 'none'; // Скрываем модальное окно.
     }
-});
+});hjh
